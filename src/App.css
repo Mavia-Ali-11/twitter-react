@@ -1,0 +1,1681 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Archivo";
+  scroll-behavior: smooth;
+}
+
+/* Home screen */
+
+.mainParent {
+  display: flex;
+  overflow: hidden;
+  max-height: 100vh;
+  justify-content: center;
+}
+
+.mainParent > div:last-child {
+  width: 61%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainParent .feeds {
+  width: 162%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  border-right: 1px solid #eff3f4;
+}
+
+.mainParent .widgets {
+  overflow: auto;
+}
+
+.mainSidebar > nav > div > div::-webkit-scrollbar,
+.emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar {
+  width: 2px;
+}
+
+.mainParent > div:last-child > div::-webkit-scrollbar {
+  width: 0px;
+}
+
+.mainSidebar > nav > div > div::-webkit-scrollbar-track,
+.mainParent > div:last-child > div::-webkit-scrollbar-track,
+.emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar-track {
+  background-color: #fff; 
+}
+
+.mainSidebar > nav > div > div::-webkit-scrollbar-thumb,
+.mainParent > div:last-child > div::-webkit-scrollbar-thumb,
+.emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #cfd9de; 
+}
+
+/* Sign in / Sign up */
+
+.signin .row {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.signin .row > div:first-child {
+  padding: 0px;
+  height: 100%;
+  display: flex;
+  max-width: 54%;
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+  background-position: center;
+  background-color: #1d9bf0;
+  background-repeat: no-repeat;
+  background-image: url(images/loginimg.png);
+}
+
+.signin .row > div:first-child svg {
+  color: #fff;
+  max-width: 42%;
+  filter: invert(1);
+}
+
+.signin .row > div:last-child {
+  display: flex;
+  overflow: auto;
+  max-width: 46%;
+  max-height: 100vh;
+  padding: 0 0 0 40px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.signin .row > div:last-child
+> div:first-child svg {
+  font-size: 50px;
+  margin-top: 35px;
+  color: #1d9bf0;
+}
+
+.signin .row h2 {
+  font-size: 62px;
+  font-weight: 900;
+  margin: 50px 0px;
+}
+
+.signin .row h4 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.signin label, .signin input {
+  font-family: Archivo;
+}
+
+.signin #authBtn,
+.signin #gotoBtn,
+.signin #forgotPassword {
+  width: 350px;
+  font-size: 16px;
+  box-shadow: none;
+  margin-top: 20px;
+  border-radius: 30px;
+  text-transform: none;
+  font-family: Archivo;
+  background-color: #1d9bf0;
+}
+
+.signin #authBtn:hover {
+  background-color: rgba(26, 140, 216);
+}
+
+.signin #forgotPassword {
+  background-color: #272c30;
+}
+
+.signin #forgotPassword:hover {
+  opacity: 0.94;
+}
+
+.signin #tc {
+  font-size: 11px;
+  max-width: 350px;
+  color: #536471;
+  margin: 10px 0px 50px 0px;
+}
+
+.signin #tc Link {
+  color: #1d9bf0;
+}
+
+.signin h6 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 5px 0 15px 0;
+}
+
+.signin #gotoBtn {
+  color: #1d9bf0;
+  margin: 0 0 50px 0;
+  border-color: #cfd9de;
+  background-color: #fff;
+}
+
+.signin #gotoBtn:hover {
+  background-color: rgba(29, 155, 240, 0.1);
+}
+ 
+.signin #errorMsg {
+  max-width: 350px;
+}
+
+.Toastify {
+  font-size: 14px;
+}
+
+/* Profile */
+
+.user-info > div {
+  text-align: center;
+  padding: 40px 16px;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.user-info > div:first-child {
+  border-top: 1px solid #eff3f4;
+}
+
+.user-info > div:last-child {
+  margin-bottom: 30px;
+}
+
+.user-info > div h4 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Archivo;
+}
+
+.user-info h6 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #536471;
+  margin: 40px 0 20px;
+  font-family: Archivo;
+}
+
+.user-info .username p {
+  color: red;
+  margin: auto;
+  max-width: 50%;
+  font-size: 14px;
+  font-family: Archivo;
+}
+
+.user-avatar {
+  transition: 0.3s;
+  position: relative;
+  border-radius: 100%;
+  max-width: fit-content;
+  margin: 40px auto 25px;
+  border: 3px solid transparent;
+}
+
+.user-avatar:hover {
+  transition: 0.3s;
+  border-color: #1d9bf0;
+}
+
+.user-avatar #profileImg {
+  opacity: 1;
+  width: 140px;
+  height: 140px;
+  display: block;
+  cursor: pointer;
+  border-radius: 100%;
+  filter: brightness(0.8);
+}
+
+.user-avatar .middle {
+  top: 51%;
+  left: 49%;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+  position: absolute;
+  transition: .3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.user-avatar .middle svg {
+  width: 36px;
+  height: 36px;
+  color: #fff;
+}
+
+.user-info button,
+.changing-dialog button {
+  border: 0px;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 4px;
+  transition: 0.3s;
+  padding: 6px 24px;
+  border-radius: 30px;
+  font-family: Archivo;
+  background-color: #1d9bf0;
+}
+
+.user-info a {
+  color: #1d9bf0;
+  font-family: Archivo;
+  text-decoration: none;
+}
+
+.user-info a:hover {
+  text-decoration: underline;
+}
+
+.changing-dialog button {
+  font-size: 14px;
+  padding: 6px 18px 5px;
+  color: #fff !important;
+  text-transform: capitalize;
+}
+
+.user-info button:hover,
+.changing-dialog button:hover {
+  opacity: 0.94;
+  transition: 0.3s;
+  background-color: #1d9bf0;
+}
+
+.changing-dialog .cancelBtn {
+  background-color: #272c30;
+}
+
+.changing-dialog .cancelBtn:hover {
+  background-color: #272c30;
+}
+
+#imageUpload, #post-imgs-inp {
+  display: none;
+}
+
+.changing-dialog h2, .changing-dialog p, 
+.changing-dialog label, .changing-dialog input {
+  font-family: Archivo;
+}
+
+.changing-dialog > div:nth-child(3) > div {
+  padding: 10px;
+  border-radius: 30px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar > div > a svg {
+  padding: 10px;
+  margin: 2px 0px;
+  font-size: 52px;
+  color: #1d9bf0;
+  border-radius: 100%;
+}
+
+.sidebar > div > a svg:hover {
+  cursor: pointer;
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+.sidebar ul a > div {
+  width: fit-content;
+  border-radius: 25px;
+  margin-bottom: 8px;
+  padding: 6px 18px 6px 16px;
+}
+
+.sidebar ul a > div:hover {
+  background-color: rgba(15, 20, 25, 0.1);
+}
+
+.sidebar ul a > div > div:first-child {
+  min-width: 50px;
+}
+
+.sidebar ul svg {
+  font-size: 24px;
+}
+
+.sidebar ul svg path {
+  stroke: #000;
+  stroke-width: 23px;
+  color: transparent;
+}
+
+.sidebar ul svg.activeIcons path {
+  color: #000;
+  stroke-width: 0px;
+}
+
+.sidebar ul a {
+  color: #000;
+  text-decoration: none;
+}
+
+.sidebar ul a span {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: Archivo;
+}
+
+.sidebar ul div.activeScr span {
+  font-weight: 600;
+}
+
+.mainSidebar > nav > div > div {
+  max-height: 100vh;
+  border-color: #eff3f4;
+}
+
+.mainSidebar > div {
+  width: 100%;
+  display: none;
+  background-color: #fff;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.mainSidebar nav > div > div {
+  position: unset;
+  min-height: 100vh;
+}
+
+.sidebar .tweetSidebar {
+  width: 85%;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 0px;
+  border-radius: 30px;
+  text-transform: none;
+  margin: 8px 0px 30px;
+  font-family: Archivo;
+  background-color: #1d9bf0;
+  box-shadow: rgb(0 0 0 / 8%) 0px 8px 28px;
+}
+
+.sidebar .tweetSidebar:hover {
+  box-shadow: none;
+  background-color: rgba(26, 140, 216);
+}
+
+.sidebar .tweetSidebarIcon {
+  width: 52px;
+  height: 52px;
+  display: none;
+  align-items: center;
+  border-radius: 100%;
+  justify-content: center;
+  background-color: #1d9bf0;
+}
+
+.sidebar .tweetSidebarIcon svg {
+  width: 25px;
+  fill: #fff;
+}
+
+.sidebar .tweetSidebarIcon path {
+  stroke-width: 0;
+}
+
+.sidebar .signOut button {
+  width: 95%;
+  padding: 12px;
+  box-shadow: none;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-family: Archivo;
+  background-color: transparent;
+}
+
+.sidebar .signOut button:hover {
+  background-color: rgba(15, 20, 25, 0.1);
+}
+
+.accDetails {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accDetails > div:first-child {
+  width: 100%;
+  display: flex;
+}
+
+.accDetails > div div:nth-child(2) {
+  margin-left: 12px;
+}
+
+.accDetails img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.accDetails h6,
+.accDetails p {
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  color: #536471;
+  letter-spacing: 0.2px;
+  text-transform: initial;
+}
+
+.accDetails h6 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.accDetails svg {
+  color: #000;
+}
+
+.popup > div:nth-child(3) {
+  width: 300px;
+  border-radius: 15px;
+  padding: 20px 0px 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.accDetails.onPopover {
+  padding: 0px 20px 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.accDetails.onPopover > div svg {
+  color: #1d9bf0;
+}
+
+.accDetails.onPopover ~ div,
+.accDetails.onPopover ~ a > div {
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 16px 20px;
+}
+
+.accDetails.onPopover ~ div:hover,
+.accDetails.onPopover ~ a > div:hover {
+  transition: 0.3s;
+  background-color: #f7f9f9;
+}
+
+.accDetails.onPopover ~ a,
+.accDetails.onPopover ~ div {
+  color: #000;
+  font-size: 16px;
+  font-family: Archivo;
+  text-decoration: none;
+}
+
+#screen-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#screen-title h4 {
+  margin-top: 2px;
+  font-weight: 700;
+  font-family: Archivo;
+}
+
+#screen-title > div:last-child {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+  border-radius: 100%;
+  justify-content: center;
+}
+
+#screen-title > div:last-child:hover {
+  transition: 0.3s;
+  background-color: rgba(15, 20, 25, 0.1);
+}
+
+#screen-title > div:last-child svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Widgets */
+
+.widgets {
+  width: 100%;
+  padding-left: 30px;
+  font-family: Archivo;
+}
+
+.widgets > div:first-child {
+  top: 0px;
+  z-index: 9;
+  position: sticky;
+  padding: 5px 0px;
+  background-color: #fff;
+}
+
+.searchBar {
+  width: 100% !important;
+}
+
+.searchBar > div:first-child {
+  left: 3px;
+  z-index: 1;
+}
+
+.searchBar > div svg {
+  width: 20px;
+  fill: #536471;
+}
+
+.searchBar > div:last-child {
+  width: 100%;
+  font-weight: 300;
+  font-family: Archivo;
+}
+
+.searchBar input {
+  width: 100%;
+  border-radius: 30px;
+  background-color: #eff3f4;
+  border: 1px solid #eff3f4;
+  padding: 10px 25px 10px 55px !important;
+}
+
+.searchBar input:focus {
+  background-color: #fff;
+}
+
+.searchBar input::placeholder {
+  opacity: 1;
+  color: #536471;
+}
+
+.widgets .widget {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 16px;
+  background-color: #f7f9f9;
+}
+
+.widgets .widget h4 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 0;
+  padding: 12px 16px;
+}
+
+.widgets .widget .news {
+  display: flex;
+  cursor: pointer;
+  padding: 12px 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.widgets .widget .news:hover,
+.widgets .widget .profiles > div:hover {
+  background-color: #eff1f1;
+}
+
+.widgets .widget .news > div:first-child {
+  width: 75%;
+  margin-top: -5px;
+  padding-right: 5px;
+}
+
+.widgets .widget .news > div span {
+  font-size: 12px;
+  color: #536471;
+}
+
+.widgets .widget .news > div p {
+  margin: 3px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.widgets .widget .news a {
+  font-size: 12px;
+  color: #1d9bf0;
+  text-decoration: none;
+}
+
+.widgets .widget .news a:hover {
+  text-decoration: underline;
+}
+
+.widgets .widget .news > div svg {
+  width: 18px;
+}
+
+.widgets .widget .news > div:last-child img {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+}
+
+.widgets .widget .trend > div:last-child svg,
+.tweet-meta > div svg {
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  cursor: pointer;
+  fill: #536471;
+  transition: 0.3s;
+}
+
+.widgets .widget .trend > div:last-child svg:hover,
+.tweet-meta > div svg:hover {
+  fill: #1d9bf0;
+  transition: 0.3s;
+  border-radius: 100%;
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+.widgets .widget .news > div:first-child span svg {
+  fill: #1d9bf0;
+}
+
+.widgets .widget .news > div:first-child span span {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.widgets .widget .show-more {
+  width: 100%;
+  padding: 16px 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.widgets .widget .show-more a {
+  font-size: 15px;
+}
+
+.widgets .widget .show-more a:hover {
+  text-decoration: none !important;
+}
+
+.widgets .profiles > div {
+  display: flex;
+  cursor: pointer;
+  padding: 12px 16px;
+  justify-content: space-between;
+}
+
+.widgets .profiles > div img {
+  width: 50px;
+  border-radius: 100%;
+}
+
+.widgets .profiles > div span {
+  top: -3px;
+  font-size: 14px;
+  color: #536471;
+  position: relative;
+}
+
+.widgets .profiles > div p {
+  margin: 0px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  padding-right: 12px;
+}
+
+.widgets .profiles > div p:hover {
+  text-decoration: underline;
+}
+
+.widgets .profiles > div p svg {
+  width: 18px;
+  fill: #1d9bf0;
+  margin-top: -3px;
+  margin-left: 3px;
+}
+
+.widgets .profiles > div > div:last-child {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.widgets .profiles > div button {
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 30px;
+  background-color: #0f1419;
+}
+
+.widgets .profiles button {
+  background-color:#272c30;
+}
+
+.widgets .footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 18px 16px;
+}
+
+.widgets .footer div {
+  display: flex;
+  margin-right: 12px;
+  margin-bottom: 2px;
+  height: fit-content;
+}
+
+.widgets .footer div p {
+  font-size: 12px;
+  cursor: pointer;
+  color: #536471;
+  width: fit-content;
+  margin-bottom: 0px;
+}
+
+.widgets .footer div span { 
+  top: -2px;
+  left: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+}
+
+.widgets .footer div p:hover {
+  text-decoration: underline !important;
+}
+
+.widgets .footer div:last-child p:hover {
+  text-decoration: none !important;
+}
+
+/* Feeds */
+
+.mainParent > div:last-child .feeds .header {
+  top: 0px;
+  z-index: 1;
+  height: 53px;
+  display: flex;
+  cursor: pointer;
+  position: sticky;
+  align-items: center;
+  padding: 0 8px 0 16px;
+  backdrop-filter: blur(12px);
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.feeds .header h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  font-family: Archivo;
+}
+
+.feeds .header div {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+  border-radius: 100%;
+  justify-content: center;
+}
+
+.feeds .header div:hover{
+  transition: 0.3s;
+  background-color: rgba(15, 20, 25, 0.1);
+}
+
+.feeds .header svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tweet-maker {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.tweet-maker > .avatar-feed img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 100%;
+}
+
+.tweet-maker > .avatar-feed img:hover {
+  transition: 0.3s;
+  filter: brightness(0.8);
+}
+
+.tweet-maker > .tweet-input {
+  width: 100%;
+  padding-left: 12px;
+}
+
+.tweet-maker > div textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 18px;
+  overflow: hidden;
+  font-weight: 300;
+  line-height: 26px;
+  padding: 10px 6px;
+  font-family: Archivo;
+  border-bottom: 1px solid transparent;
+}
+
+.tweet-maker > div textarea::placeholder {
+  color: #536471;
+}
+
+.tweet-maker > div textarea:focus {
+  outline: none;
+  border-color: #eff3f4;
+}
+
+.tweet-maker #post-imgs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#post-imgs > div {
+  width: 48%;
+  height: auto;
+  flex: 2 1 auto;
+  position: relative;
+  border-radius: 16px;
+  margin: 12px 10px 0 0;
+  background-size: cover;
+}
+
+#post-imgs > div img {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+#post-imgs .del-icon {
+  top: 4px;
+  left: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  align-items: center;
+  border-radius: 100%;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  background-color: rgba(15, 20, 25, 0.75);
+}
+
+#post-imgs .del-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+#post-imgs .del-icon:hover {
+  background-color: rgba(39, 44, 48, 0.75);
+}
+
+.tweet-maker > div .tweet-extras {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -3px;
+  position: relative;
+  align-items: center;
+  padding: 14px 0px 3px;
+  justify-content: space-between;
+}
+
+.tweet-extras > div:first-child {
+  display: flex;
+}
+
+.tweet-extras > div:first-child > div {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  transition: 0.3s;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet-extras > div:first-child > div:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+.tweet-extras > div:first-child > span {
+  left: 0%;
+  top: 73px;
+  z-index: 11;
+  position: absolute;
+}
+
+.tweet-extras > div:first-child svg {
+  width: 20px;
+  fill: #1d9bf0;
+  margin-right: 1px;
+}
+
+.tweet-extras > .tweetValidator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tweet-extras > .tweetValidator button {
+  border: 0px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  min-height: 36px;
+  border-radius: 30px;
+  font-family: Archivo;
+  padding: 6px 18px 6px 16px;
+  background-color: #1d9bf0;
+}
+
+aside.emoji-picker-react {
+  border: none;
+  width: 320px;
+  height: 380px;
+  border-radius: 20px;
+  font-family: Archivo;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.emoji-picker-react .active-category-indicator-wrapper {
+  display: none;
+}
+
+.emoji-picker-react ul.skin-tones-list {
+  top: 18px;
+}
+
+.emoji-picker-react .emoji-categories button{
+  background-position: 8px 50%;
+}
+
+.emoji-picker-react .emoji-categories button {
+  width: 80%;
+  height: 35px;
+  margin: 10px 0px;
+  border-bottom: 2px solid #cfd9de;
+}
+
+.emoji-picker-react .emoji-categories button.active {
+  border-color: #1d9bf0;
+}
+
+.emoji-picker-react .emoji-group:before {
+  color: #000;
+  text-transform: capitalize;
+}
+
+aside.emoji-picker-react .content-wrapper:before {
+  right: 17px;
+  font-size: 12px;
+  max-width: 150px;
+}
+
+.loader {
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.loader svg {
+  color: #1d9bf0;
+  margin-bottom: 20px;
+  transform: scale(1.5);
+}
+
+.loader h6 {
+  color: #536471;
+  margin-top: 30px;
+  font-family: Archivo;
+}
+
+.tweetValidator > div:first-child {
+  height: 20px;
+}
+
+.tweetValidator > div:first-child > div:first-child {
+  transition: 0.3s;
+}
+
+.tweetValidator > .seperator {
+  width: 1px;
+  height: 31px;
+  margin: 0px 16px 0 14px;
+  background-color: #b9cad3;
+}
+
+.tweetValidator > div:first-child span {
+  color: #1d9bf0;
+  width: 20px !important;
+  height: 20px !important;
+  transform: rotate(-90deg);
+}
+
+.tweetValidator > div:first-child > div > div {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 2.2px solid #eff3f4;
+}
+
+.tweetValidator > div:first-child > div > div > div {
+  width: 100%;
+  font-size: 9px;
+  text-align: center;
+  font-family: Archivo;
+}
+
+.posts {
+  display: flex;
+  font-family: Archivo;
+  flex-direction: column-reverse;
+}
+
+.posts > div {
+  width: 100%;
+  margin: auto;
+  cursor: pointer;
+  padding: 10px 16px 8px;
+  border-bottom: 1px solid #eff3f4;
+}
+
+.posts > div:first-child {
+  margin-bottom: 30px;
+}
+
+.posts > div:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.posts .post-data {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.post-data > div:last-child {
+  width: 100%;
+  margin-left: 12px;
+}
+
+.post-data> div:first-child img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.post-data .tweet-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-meta > div:first-child {
+  width: 100%;
+  display: flex;
+  margin-top: -5px;
+  align-items: center;
+}
+
+.tweet-meta h6 {
+  font-size: 16px;
+  margin: 0px 5px -1px 0;
+}
+
+.tweet-meta p {
+  margin: 0;
+  font-size: 14px;
+  color: #536471;
+}
+
+.text p {
+  color: #000;
+  font-size: 15px;
+  margin-top: -5px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 12px;
+  word-break: break-word;
+}
+
+.tweet-meta span {
+  color: #536471;
+  font-weight: 500;
+  margin: -6px 4px 0;
+}
+
+.post-data .reactions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.reactions > div {
+  width: 30%;
+  margin-left: -7px;
+}
+
+.reactions svg {
+  width: 1.25em;
+  fill: #536471;
+}
+
+.likes svg {
+  width: 1.25rem;
+  stroke: #536471;
+  fill: transparent;
+  stroke-width: 1.5px;
+}
+
+.reactions span {
+  font-size: 14px;
+  color: #536471;
+  padding: 0px 4px;
+}
+
+.comment, .retweet, .likes, .share {
+  display: flex;
+  transition: 0.3s;
+  width: fit-content;
+  align-items: center;
+}
+
+.com-icon, .rt-icon, .like-icon, .share-icon {
+  display: flex;
+  width: 2.25em;
+  height: 2.25em;
+  transition: 0.3s;
+  align-items: center;
+  border-radius: 100%;
+  justify-content: center;
+} 
+
+.comment:hover .com-icon {
+  transition: 0.3s;
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+.retweet:hover .rt-icon {
+  transition: 0.3s;
+  background-color: rgba(0, 186, 124, 0.1);
+}
+
+.likes:hover .like-icon {
+  transition: 0.3s;
+  background-color: rgb(249, 24, 128, 0.1);
+}
+
+.share:hover .share-icon {
+  transition: 0.3s;
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+.comment:hover .com-icon svg {
+  fill: #1d9bf0;
+  transition: 0.3s;
+}
+
+.retweet:hover .rt-icon svg {
+  fill: #00ba7c;
+  transition: 0.3s;
+}
+
+.likes:hover .like-icon svg {
+  transition: 0.3s;
+  stroke: #f91880;
+}
+
+.share:hover .share-icon svg {
+  fill: #1d9bf0;
+  transition: 0.3s;
+}
+
+.comment:hover .com-count {
+  transition: 0.3s;
+  color: #1d9bf0;
+}
+
+.retweet:hover .rt-count {
+  transition: 0.3s;
+  color: #00ba7c;
+}
+
+.likes:hover .like-count {
+  transition: 0.3s;
+  color: #f91880;
+}
+
+.liked .like-icon svg {
+  fill: #f91880;
+  stroke: #f91880;
+}
+
+.liked .like-count {
+  color: #f91880;
+}
+
+.posters {
+  width: 100%;  
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  border: 1px solid #cfd9de;
+  background-color: #f7f9f9;
+  justify-content: space-between;
+}
+
+.posters > div {
+  width: 49%;
+  height: auto;
+  flex: 2 1 auto;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.posters > div img {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+#lightbox {
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: auto;
+  position: fixed;
+  overflow: hidden;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  background-color: rgba(0, 0, 0, 0.6)
+}
+
+#lightbox > div {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  padding: 0 32px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#lightbox > div > div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+  transition: 0.2s;
+  visibility: hidden;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #363640;
+}
+
+#lightbox > div > div:first-child {
+  visibility: visible;
+}
+
+#lightbox > div > div:hover {
+  transition: 0.2s;
+  transform: scale(1.15);
+}
+
+#lightbox > div svg {
+  width: 22px;
+  height: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#lightbox > div img {
+  max-width: 80%;
+  border-radius: 12px;
+  animation-duration: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+#lightbox .close {
+  top: 16px;
+  right: 32px;
+  cursor: pointer;
+  position: absolute;
+}
+
+@keyframes slidein {
+  from {transform: translateY(-100vh);} 
+  to {transform: translateY(0%);}
+}
+@keyframes slideback {
+  from {transform: translateY(0%);}
+  to {transform: translateY(100vh);}
+}
+@keyframes nextleft {
+  from {transform: translateX(0%);} 
+  to {transform: translateX(-100vw);}
+}
+@keyframes nextright {
+  from {transform: translateX(100vw);} 
+  to {transform: translateX(0%);}
+}
+@keyframes prevright {
+  from {transform: translateX(0%);} 
+  to {transform: translateX(100vw);} 
+}
+@keyframes prevleft {
+  from {transform: translateX(-100vw);}
+  to {transform: translateX(0%);}
+}
+
+@media screen and (max-width: 1400px) {
+  .mainParent > div:last-child {
+    width: 72%;
+  }
+  .sidebar ul a > div {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .mainParent > div:last-child {
+    width: 88%;
+  }
+  .mainParent .feeds {
+    width: 188%;
+  }
+  .mainSidebar nav {
+    max-width: 80px;
+  }
+  .mainSidebar nav > div > div {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .sidebar {
+    text-align: center;
+  }
+  .sidebar ul a > div > div:nth-child(2) {
+    display: none;
+  }
+  .sidebar ul a > div {
+    padding: 0;
+    width: 46px;
+    height: 46px;
+    margin: auto;
+    display: flex;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar ul a > div > div:first-child {
+    min-width: 0px;
+  }
+  .sidebar .tweetSidebar {
+    display: none;
+  }
+  .sidebar .tweetSidebarIcon {
+    margin: auto;
+    display: flex;
+  }
+  .accDetails > div > div:nth-child(2),
+  .accDetails svg {
+    display: none;
+  }
+  .accDetails.onPopover > div > div:nth-child(2),
+  .accDetails.onPopover svg {
+    display: block !important;
+  }
+  .widgets {
+    padding-left: 18px;
+  }
+  .widgets .profiles > div > div:last-child {
+    width: 78%;
+  }
+  .sidebar .signOut > div {
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    margin: auto;
+    display: flex;
+    margin-bottom: 4px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar .signOut > div:hover {
+    background: rgba(15, 20, 25, 0.1);
+  }
+  .sidebar .signOut button {
+    margin-bottom: 0; 
+  }
+  .sidebar .signOut button:hover {
+    margin: 0;
+    background: transparent;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .signin .row {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .signin .row > div {
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+  .signin .row > div:last-child {
+    margin: auto;
+    padding: 0px;
+    max-width: 80% !important;
+  }
+  .signin .row > div:first-child svg {
+    padding: 70px 0px;
+  }
+  .mainParent .widgets {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .signin .row h2 {
+    font-size: 45px;
+  }
+  .signin .row h4 {
+    font-size: 24px;
+  }
+  .MuiFormControl-root, .MuiButton-root {
+    max-width: 100%;
+  }
+  .feeds .header {
+    display: none !important;
+  }
+  .mainParent {
+    display: block;
+    overflow: auto;
+  }
+  .mainSidebar {
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    position: sticky;
+  }
+  .mainSidebar > div {
+    display: flex;
+  }
+  .mainParent > div:last-child {
+    width: 100%;
+  }
+  .sidebar > div > a svg {
+    top: 4px;
+    right: 34%;
+    position: relative;
+  }
+  .sidebar ul a > div > div:nth-child(2) {
+    display: block;
+  }
+  .sidebar ul a > div {
+    width: 92%;
+    margin: 6px 0 0 6px;
+    padding: 6px 0 6px 18px;
+  }
+  .sidebar ul a > div > div:first-child {
+    min-width: 40px;
+  }
+  .sidebar .tweetSidebar {
+    display: block;
+    margin: 20px auto;
+  }
+  .sidebar .tweetSidebarIcon {
+    display: none;
+  }
+  .sidebar .signOut > div {
+    width: 100%;
+    margin-bottom: 0px;
+    border-radius: 0px;
+  }
+  .accDetails > div > div:nth-child(2), 
+  .accDetails svg {
+    display: block;
+  }
+  .tweet-meta > div:first-child {
+    flex-wrap: wrap;
+  }
+  .user-info h6 {
+    margin: 30px 0 16px;
+  }
+  .user-info .username p {
+    max-width: 86%;
+  }
+  .posters > div {
+    max-height: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .tweet-extras > div:first-child{
+    width: 100%;
+  }
+  .tweet-extras > .tweetValidator {
+    margin-top: 12px;
+  }
+  .tweet-meta > div:first-child {
+    margin-top: 0;
+  }
+  .tweet-extras > .tweetValidator button {
+    min-height: 32px;
+    padding: 5px 18px 4px 16px;
+  }
+  .tweet-maker > div .tweet-extras {
+    padding-top: 6px;
+  }
+  .tweet-extras > div:first-child > span {
+    top: 120px;
+    left: -56px;
+  }
+  .tweet-extras > div:first-child > span aside {
+    width: 280px;
+  }
+  .post-data> div:first-child img {
+    width: 40px;
+    height: 40px;
+  }
+  .text p {
+    margin-top: 4px;
+  }
+  .reactions svg {
+    width: 1.15rem;
+  }
+  #lightbox > div {
+    padding: 0;
+    justify-content: space-around;
+  }
+  #lightbox > div img {
+    max-width: 92%;
+  }
+  #lightbox > div > div {
+    right: 38%;
+    bottom: 120px;
+    position: absolute;
+  }
+  #lightbox > div > div:nth-child(2) {
+    left: 38%;
+  }
+  #lightbox > div > div svg {
+    width: 18px;
+    height: 18px;
+  }
+  #lightbox .close {
+    right: 12px;
+  }
+  .changing-dialog > div:nth-child(3) > div h2,
+  .changing-dialog > div:nth-child(3) > div > .MuiDialogTitle-root + .css-1ty026z {
+    padding: 12px;
+  } 
+  .changing-dialog > div:nth-child(3) > div > .MuiDialogTitle-root + .css-1ty026z {
+    padding-top: 0;
+    margin-top: -8px;
+  } 
+}
